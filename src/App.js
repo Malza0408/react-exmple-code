@@ -3,10 +3,11 @@ import "./App.css";
 import ControlledComponent from "./components/controlledComponent";
 import UncontrolledComponent from "./components/uncontrolledComponent";
 import useWindowWidth from "./hooks/useWindowWidth";
-import { useEffect } from "react";
+import withHasMounted from "./hocs/withHasMounted";
 
-function App() {
+function App({ hasMounted }) {
   const customHookWidth = useWindowWidth();
+  console.log(hasMounted);
   return (
     <div className="App">
       <header className="App-header">
@@ -14,11 +15,11 @@ function App() {
         {/* controlled and uncontrolled example
         <ControlledComponent />
         <UncontrolledComponent /> */}
-        {/* CustomHook Example */}
-        {customHookWidth}
+        {/* CustomHook Example
+        {customHookWidth} */}
       </header>
     </div>
   );
 }
 
-export default App;
+export default withHasMounted(App);
