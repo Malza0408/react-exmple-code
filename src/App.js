@@ -4,10 +4,13 @@ import ControlledComponent from "./components/controlledComponent";
 import UncontrolledComponent from "./components/uncontrolledComponent";
 import useWindowWidth from "./hooks/useWindowWidth";
 import withHasMounted from "./hocs/withHasMounted";
+import useHasMounted from "./hooks/useHasMounted";
 
 function App({ hasMounted }) {
   const customHookWidth = useWindowWidth();
-  console.log(hasMounted);
+  const hasMountedFromHooks = useHasMounted();
+
+  console.log(hasMounted, hasMountedFromHooks);
   return (
     <div className="App">
       <header className="App-header">
