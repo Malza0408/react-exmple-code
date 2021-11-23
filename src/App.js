@@ -5,6 +5,7 @@ import UncontrolledComponent from "./components/uncontrolledComponent";
 import useWindowWidth from "./hooks/useWindowWidth";
 import withHasMounted from "./hocs/withHasMounted";
 import useHasMounted from "./hooks/useHasMounted";
+import ReducerComponent from "./components/reducerComponent";
 
 function App({ hasMounted }) {
   const customHookWidth = useWindowWidth();
@@ -20,6 +21,8 @@ function App({ hasMounted }) {
         <UncontrolledComponent /> */}
         {/* CustomHook Example
         {customHookWidth} */}
+        {/* reducer Example */}
+        <ReducerComponent />
       </header>
     </div>
   );
